@@ -69,7 +69,7 @@ export class NgxCropperjsComponent {
 
     /**
      * Image lodaded event
-     * @param {event} ev 
+     * @param ev 
      */
     imageLoaded(ev: Event) {
 
@@ -134,7 +134,7 @@ export class NgxCropperjsComponent {
 
     /**
      * Image load error
-     * @param {event} event 
+     * @param event 
      */
     imageLoadError(event: any) {
 
@@ -149,7 +149,7 @@ export class NgxCropperjsComponent {
 
     /**
      * Export canvas
-     * @param {string} base64 
+     * @param base64 
      */
     exportCanvas(base64?: any) {
 

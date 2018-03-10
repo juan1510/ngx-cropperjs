@@ -10,7 +10,7 @@ export interface ImageCropperResult {
     blob?: Blob;
     dataUrl?: string;
 }
-export declare class AngularCropperjsComponent {
+export declare class NgxCropperjsComponent {
     image: ElementRef;
     imageUrl: any;
     settings: ImageCropperSetting;
@@ -25,17 +25,17 @@ export declare class AngularCropperjsComponent {
     loadError: any;
     /**
      * Image lodaded event
-     * @param {event} ev
+     * @param ev
      */
     imageLoaded(ev: Event): void;
     /**
      * Image load error
-     * @param {event} event
+     * @param event
      */
     imageLoadError(event: any): void;
     /**
      * Export canvas
-     * @param {string} base64
+     * @param base64
      */
     exportCanvas(base64?: any): void;
 }

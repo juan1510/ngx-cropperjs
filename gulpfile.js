@@ -5,8 +5,8 @@ var gulp = require('gulp'),
   rollup = require('gulp-rollup'),
   rename = require('gulp-rename'),
   del = require('del'),
-  runSequence = require('run-sequence'),
-  inlineResources = require('./tools/gulp/inline-resources');
+  runSequence = require('run-sequence');
+  // inlineResources = require('./tools/gulp/inline-resources');
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
@@ -37,28 +37,24 @@ gulp.task('copy:source', function () {
 /**
  * 3. Inline template (.html) and style (.css) files into the the component .ts files.
  *    We do this on the /.tmp folder to avoid editing the original /src files
- */
+
 gulp.task('inline-resources', function () {
   return Promise.resolve()
     .then(() => inlineResources(tmpFolder));
 });
-
+ */
 
 /**
  * 4. Run the Angular compiler, ngc, on the /.tmp folder. This will output all
  *    compiled modules to the /build folder.
  */
 gulp.task('ngc', function () {
-  return ngc({
-    project: `${tmpFolder}/tsconfig.es5.json`
-  })
-    .then((exitCode) => {
-      if (exitCode === 1) {
-        // This error is caught in the 'compile' task by the runSequence method callback
-        // so that when ngc fails to compile, the whole compile process stops running
-        throw new Error('ngc compilation failed');
-      }
-    });
+  return ngc([
+    '--project', `${tmpFolder}/tsconfig.es5.json`
+  ],(error)=>{
+    throw new Error('ngc compilation failed: '+ error);
+  });
+  
 });
 
 /**
@@ -187,7 +183,7 @@ gulp.task('compile', function () {
   runSequence(
     'clean:dist',
     'copy:source',
-    'inline-resources',
+  //  'inline-resources',
     'ngc',
     'rollup:fesm',
     'rollup:umd',

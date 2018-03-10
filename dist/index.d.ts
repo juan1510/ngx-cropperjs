@@ -1,5 +1,5 @@
 import { ModuleWithProviders } from '@angular/core';
-export * from './angular-cropperjs.component';
-export declare class AngularCropperjsModule {
+export * from './ngx-cropperjs.component';
+export declare class NgxCropperjsModule {
     static forRoot(): ModuleWithProviders;
 }
