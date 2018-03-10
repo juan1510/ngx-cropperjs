@@ -28,7 +28,7 @@ export interface ImageCropperResult {
 @Component({
     selector: 'ngx-cropperjs',
     templateUrl: './ngx-cropperjs.component.html',
-    styleUrls: ['./ngx-cropperjs.component.scss'],
+    styleUrls: ['./ngx-cropperjs.component.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class NgxCropperjsComponent {

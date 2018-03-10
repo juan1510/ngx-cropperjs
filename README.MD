@@ -1,16 +1,16 @@
 # angular-cropperjs
 
-[CropperJS](https://fengyuanchen.github.io/cropperjs/) integration for Angular 2/4
+[CropperJS](https://fengyuanchen.github.io/cropperjs/) integration for Angular 5+
  
 ## How to use
 
 1- Install the library:
 
 ```bash
-$ npm install angular-cropperjs --save
+$ npm install ngx-cropperjs --save
 ```
 
-2- Import and load `AngularCropperjsModule` in the module you want to use, for example `AppModule`:
+2- Import and load `NgxCropperjsModule` in the module you want to use, for example `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
 
 //
 // Import angular-cropperjs
-import { AngularCropperjsModule } from 'angular-cropperjs';
+import { NgxCropperjsModule } from 'ngx-cropperjs';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { AngularCropperjsModule } from 'angular-cropperjs';
     
     //
     // Load angular-cropperjs
-    AngularCropperjsModule
+    NgxCropperjsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,7 +43,7 @@ export class AppModule { }
 
 ```html
 <!-- You can now use angular-cropper component in app.component.html -->
-<angular-cropper [cropperOptions]="config" [imageUrl]="imageUrl"></angular-cropper>
+<ngx-cropperjs [cropperOptions]="config" [imageUrl]="imageUrl"></ngx-cropperjs>
 ```
 
 **Using CropperJS methods:**
@@ -52,7 +52,7 @@ Use @ViewChild in your component to get the element:
 
 *In your app.component.html*
 ```html
-<angular-cropper #angularCropper ..>
+<ngx-cropperjs #angularCropper ..>
 ```
 
 *And in your app.component.ts*
@@ -60,11 +60,11 @@ Use @ViewChild in your component to get the element:
 
 //
 // Import AngularCropperjsComponent
-import { AngularCropperjsComponent } from 'angular-cropperjs';
+import { NgxCropperjsComponent } from 'ngx-cropperjs';
 
 //
 // Get with @ViewChild
-@ViewChild('angularCropper') public angularCropper: AngularCropperjsComponent;
+@ViewChild('angularCropper') public angularCropper: NgxCropperjsComponent;
 ```
 
 Then just call the CropperJS method you want:
@@ -92,5 +92,8 @@ $ npm run lint
 ```
 
 ## License
+MIT © [Stefano Gargiulo](mailto:info@creativeprogramming.com)
+
+Based on a fork of:
 
 MIT © [Matheus Davidson](mailto:matheusdavidson@gmail.com)
