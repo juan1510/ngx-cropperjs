@@ -9,7 +9,8 @@
 
 .angular-cropper-wrapper {
     position: relative;
-    min-height: 80px
+    min-height: 80px;
+    touch-action: none; /*fixes wrong behaivor on mobile*/
 }
 
 .angular-cropper-wrapper .loading-block {
