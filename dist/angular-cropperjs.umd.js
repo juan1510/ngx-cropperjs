@@ -94,7 +94,15 @@ var NgxCropperjsComponent = /** @class */ (function () {
         }, this.cropperOptions);
         //
         // Set cropperjs
-        this.cropper = new Cropper(image, this.cropperOptions);
+        if (this.cropper) {
+            if (this.lastImgSrc !== image.src) {
+                this.lastImgSrc = image.src;
+                this.cropper.replace(image.src);
+            }
+        }
+        else {
+            this.cropper = new Cropper(image, this.cropperOptions);
+        }
     };
     /**
      * Image load error

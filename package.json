@@ -1,7 +1,7 @@
 {
   "name": "ngx-cropperjs",
   "description": "CropperJS integration for Angular 5",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",

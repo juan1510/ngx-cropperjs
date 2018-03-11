@@ -23,6 +23,7 @@ export declare class NgxCropperjsComponent {
     cropper: Cropper;
     imageElement: HTMLImageElement;
     loadError: any;
+    lastImgSrc: string;
     /**
      * Image lodaded event
      * @param ev
