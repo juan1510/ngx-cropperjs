@@ -35,12 +35,12 @@
     "url": "https://github.com/creativeprogramming/ngx-cropperjs/issues"
   },
   "devDependencies": {
-    "@angular/common": "^5.2.8",
-    "@angular/compiler": "^5.2.8",
-    "@angular/compiler-cli": "^5.2.8",
-    "@angular/core": "^5.2.8",
-    "@angular/platform-browser": "^5.2.8",
-    "@angular/platform-browser-dynamic": "^5.2.8",
+    "@angular/common": "^8.1.2",
+    "@angular/compiler": "^8.1.2",
+    "@angular/compiler-cli": "^8.1.2",
+    "@angular/core": "^8.1.2",
+    "@angular/platform-browser": "^8.1.2",
+    "@angular/platform-browser-dynamic": "^8.1.2",
     "@compodoc/compodoc": "^1.0.9",
     "@types/cropperjs": "1.1.2",
     "@types/jasmine": "2.8.6",
